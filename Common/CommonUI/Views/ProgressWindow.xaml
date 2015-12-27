@@ -1,0 +1,25 @@
+<Window x:Class="CommonUI.Views.ProgressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="80" Width="300" WindowStyle="None" Topmost="True" ResizeMode="NoResize">
+	
+	<Border BorderBrush="DarkGray" BorderThickness="3">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Please Wait...</Label>
+			<ProgressBar Grid.Row="1" Name="ProgressBar1" Width="200" Height="20" Background="#FF43D3EA" IsIndeterminate="True">
+				<ProgressBar.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF0074FF" Offset="0"/>
+						<GradientStop Color="#FFAED3FF" Offset="0.997"/>
+					</LinearGradientBrush>
+				</ProgressBar.Foreground>
+			</ProgressBar>
+
+		</Grid>
+	</Border>
+</Window>

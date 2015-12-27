@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	
+	<!-- Title Bar -->
+	<SolidColorBrush x:Key="TitleBarColor" Color="#FF682185" />
+	<SolidColorBrush x:Key="TitleBarButtonHoverColor" Color="LightGray" />
+	<SolidColorBrush x:Key="TitleBarButtonPressedColor" Color="#FF88838A" />
+	<SolidColorBrush x:Key="TitleBarFontColor" Color="#FFBDBDBD" />
+
+
+	<!-- Main Window -->
+	<SolidColorBrush x:Key="MainWindowBorderColor" Color="#FF682185" />
+	<SolidColorBrush x:Key="MainWindowBackgroundColor" Color="#FF404449" />
+
+
+	<!-- Controls -->
+	<SolidColorBrush x:Key="ControlBackgroundColor" Color="#FF565656" />
+	<SolidColorBrush x:Key="ControlBorderColor" Color="#FF333333" />
+	<SolidColorBrush x:Key="ControlNormalColor" Color="#FF616161" />
+	<SolidColorBrush x:Key="ControlHoverColor" Color="#FF4A3254" />
+	<SolidColorBrush x:Key="ControlPressedColor" Color="#FF52969B" />
+	<SolidColorBrush x:Key="ControlDisabledColor" Color="#FF3E3E3E" />
+	<SolidColorBrush x:Key="ControlFontColor" Color="#FFC8C8C8" />
+
+
+	<Color x:Key="ProgressBarColor1">#FF565656</Color>
+	<Color x:Key="ProgressBarColor2">#FFA5A5A5</Color>
+	<Color x:Key="CheckMarkColor">#FFC8C8C8</Color>
+
+
+	<!-- Font -->
+	<Style TargetType="Window">
+		<Setter Property="FontFamily" Value="Arial" />
+		<Setter Property="SnapsToDevicePixels" Value="True" />
+	</Style>
+	
+</ResourceDictionary>

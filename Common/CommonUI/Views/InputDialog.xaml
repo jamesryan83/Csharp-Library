@@ -1,0 +1,21 @@
+<Window x:Class="CommonUI.Views.InputDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RenameDialog" SizeToContent="WidthAndHeight" Topmost="True" WindowStartupLocation="CenterOwner">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" MinWidth="200" />
+			<ColumnDefinition Width="Auto" />
+		</Grid.ColumnDefinitions>
+		
+		
+		
+		<Label Name="LabelName" VerticalAlignment="Center" Margin="5">New Name : </Label>
+		<TextBox Grid.Column="1" Name="TextBoxNewName" Margin="5" PreviewKeyDown="TextBoxNewName_PreviewKeyDown" />
+		<Button Grid.Column="2" Name="ButtonOk" Width="70" Margin="5" Click="ButtonOk_Click">OK</Button>
+    </Grid>
+</Window>
