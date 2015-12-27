@@ -1,0 +1,78 @@
+<Window x:Class="CommonDialogs.View.DialogMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:view="clr-namespace:CommonDialogs.View"		
+		xmlns:controls="clr-namespace:CommonUI.Controls;assembly=CommonUI"
+        SizeToContent="WidthAndHeight" WindowStyle="None" WindowStartupLocation="CenterScreen" SnapsToDevicePixels="True"
+		FontFamily="Segoe UI Symbol" ResizeMode="NoResize" Loaded="Window_Loaded"
+		Title="{Binding Path=windowTitle}">
+
+	
+	
+	<!-- Main Grid -->
+	<Border BorderBrush="{StaticResource MainWindowBorderColor}" BorderThickness="1">
+		<Grid>
+
+			<!-- Grid for rectangles -->
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+
+			<!-- Main Content Grid -->
+			<Grid Grid.RowSpan="3" Grid.ColumnSpan="3" Background="{StaticResource MainWindowBackgroundColor}">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*"/>					
+				</Grid.RowDefinitions>
+
+				
+				<!-- Title Bar -->
+				<Grid Height="25" Background="{StaticResource TitleBarColor}">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+					</Grid.ColumnDefinitions>
+
+					<TextBlock FontSize="10" VerticalAlignment="Center" Margin="10,-1,0,0" Foreground="{StaticResource TitleBarFontColor}" Name="TextBlockTitle"></TextBlock>
+                    <controls:ImageButton Grid.Column="2" ImageButtonSource="../Resources/close_normal.png" Click="CloseButton_Click"  />
+				</Grid>
+
+
+				
+				<!-- Content is in here-->
+				<Grid Grid.Row="1" Name="GridContent">
+
+                    <view:DialogSingleInput x:Name="myDialogSingleInput" Visibility="Collapsed"></view:DialogSingleInput>
+                    <view:DialogCheckboxList x:Name="myDialogCheckboxList" Visibility="Collapsed"></view:DialogCheckboxList>
+                    <view:DialogStringList x:Name="myDialogStringList" Visibility="Collapsed"></view:DialogStringList>
+                    <view:DialogMessageBoxOk x:Name="myDialogMessageBoxOk" Visibility="Collapsed"></view:DialogMessageBoxOk>
+                    <view:DialogMessageBoxOkCancel x:Name="myDialogMessageBoxOkCancel" Visibility="Collapsed"></view:DialogMessageBoxOkCancel>
+
+                </Grid>
+
+			</Grid>
+
+
+			<!-- Resizing Rectangles -->
+			<Rectangle Name="RectangleResizeNW" Grid.Row="0" Grid.Column="0" Width="5" Height="5" Fill="Transparent" Tag="ResizingRectangle" />
+			<Rectangle Name="RectangleResizeN" Grid.Row="0" Grid.Column="1" Height="5" Fill="Transparent" Tag="ResizingRectangle" />
+			<Rectangle Name="RectangleResizeNE" Grid.Row="0" Grid.Column="2" Width="5" Height="5" Fill="Transparent" Tag="ResizingRectangle"/>
+
+			<Rectangle Name="RectangleResizeW" Grid.Row="1" Grid.Column="0" Width="5" Fill="Transparent" Tag="ResizingRectangle" />
+			<Rectangle Name="RectangleResizeE" Grid.Row="1" Grid.Column="2" Width="5" Fill="Transparent" Tag="ResizingRectangle" />
+
+			<Rectangle Name="RectangleResizeSW" Grid.Row="2" Grid.Column="0" Width="5" Height="5" Fill="Transparent"  Tag="ResizingRectangle"/>
+			<Rectangle Name="RectangleResizeS" Grid.Row="2" Grid.Column="1" Height="5" Fill="Transparent" Tag="ResizingRectangle" />
+			<Rectangle Name="RectangleResizeSE" Grid.Row="2" Grid.Column="2" Width="5" Height="5" Fill="Transparent" Tag="ResizingRectangle" />
+
+		</Grid>
+	</Border>
+</Window>

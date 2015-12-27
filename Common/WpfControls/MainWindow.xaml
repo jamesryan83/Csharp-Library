@@ -1,0 +1,137 @@
+<Window x:Class="WpfControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+		xmlns:behaviors="clr-namespace:CommonUI.Behaviors;assembly=CommonUI"
+		xmlns:controls="clr-namespace:CommonUI.Controls;assembly=CommonUI"				
+        Title="MainWindow" Height="450" Width="725" ResizeMode="NoResize" WindowStyle="None"
+		BorderThickness="1" BorderBrush="{StaticResource MainWindowBorderColor}">
+	
+		
+	<!-- Main Grid -->
+	<Border BorderBrush="{StaticResource MainWindowBorderColor}" BorderThickness="1">
+		
+		<!-- Main Content Grid -->
+		<Grid Grid.RowSpan="3" Grid.ColumnSpan="3" Background="{StaticResource MainWindowBackgroundColor}" Focusable="True">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<!-- Title Bar -->
+			<Grid Height="25" Background="{StaticResource TitleBarColor}">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+
+				<TextBlock VerticalAlignment="Center" Margin="10,-1,0,0" Foreground="{StaticResource TitleBarFontColor}">Some UI Controls...</TextBlock>
+
+			</Grid>
+
+
+			<!-- Content Goes Here ... -->
+			<Grid Grid.Row="2">
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />					
+				</Grid.ColumnDefinitions>
+
+				
+				<!-- Regular Button -->
+				<Button Width="80" Height="25">Button</Button>
+
+				
+				<Grid Grid.Row="1">
+					<Grid.RowDefinitions>
+						<RowDefinition />
+						<RowDefinition />
+					</Grid.RowDefinitions>
+
+					<!-- Regular TextBox -->
+					<controls:TextBoxDragDrop Grid.Row="0" Width="150" Height="25" Text="Im so Texbox" />
+
+					<!-- Editable TextBlock -->
+					<TextBox Grid.Row="1" Width="150" Height="20" Style="{StaticResource EditableTextBox}">Click me to edit</TextBox>
+				</Grid>
+				
+					
+				<!-- CheckBox -->
+				<Grid Grid.Column="1">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition />
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+					
+					<controls:ImageCheckBox VerticalAlignment="Center" HorizontalAlignment="Center" ImageCheckBoxSource="Resources/check_normal.png" IsChecked="True" />
+
+					<controls:ImageRadioButton VerticalAlignment="Center" HorizontalAlignment="Center" ImageRadioButtonSource="Resources/check_normal.png" Grid.Column="1" />
+				</Grid>
+
+
+				<!-- Progress Bar -->
+				<ProgressBar Grid.Row="1" Grid.Column="1" Width="150" IsIndeterminate="True" Style="{StaticResource ProgressBarStyle}" />
+
+				
+				<!-- ComboBox -->
+				<ComboBox Grid.Column="2" Width="150" Height="25" SelectedIndex="0">
+					<ComboBoxItem>ComboBox 1</ComboBoxItem>
+					<ComboBoxItem>ComboBox 2</ComboBoxItem>
+					<ComboBoxItem>ComboBox 3</ComboBoxItem>
+					<ComboBoxItem>ComboBox 4 is a really long one that is too big</ComboBoxItem>
+				</ComboBox>
+				
+				
+				<!-- TextBlocks -->
+				<Grid Grid.Row="2">
+					<Grid.RowDefinitions>
+						<RowDefinition />
+						<RowDefinition />
+						<RowDefinition />
+					</Grid.RowDefinitions>
+
+					<TextBlock HorizontalAlignment="Center" Grid.Row="0">Text 1</TextBlock>
+					<TextBlock HorizontalAlignment="Center" Grid.Row="1" FontSize="15" FontWeight="Bold">Text 2</TextBlock>
+				</Grid>
+
+
+				<!-- Tabcontrol -->
+				<TabControl Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" Margin="5">
+					<TabItem Header="Tab 1" />
+					<TabItem Header="Tab 2" />
+				</TabControl>
+				
+				
+				<!-- Groupbox -->
+				<GroupBox Grid.Row="2" Grid.Column="1" Margin="5" Grid.RowSpan="3" Header="Groupbox">
+
+				</GroupBox>
+
+
+				<!-- ListBox -->
+				<controls:ListBoxDragDrop Name="SortableDragDropListBox" Margin="5" Grid.Row="1" Grid.RowSpan="4" Grid.Column="2" >				
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<Border BorderBrush="Black" BorderThickness="1" Margin="2">
+								<TextBlock Text="{Binding Path=text}" Margin="2"/>
+							</Border>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</controls:ListBoxDragDrop>
+				
+			</Grid>
+		</Grid>
+	</Border>
+</Window>
