@@ -9,8 +9,9 @@ Folder  | Description
 ------------- | -------------
 Common  | General C# functions.  No dependencies (except .net)
 Common Dialogs  | Functions for creating dialogs
-Common Excel/Mongo | Functions for MS Excel and MongoDB
-Common Json | A couple of functions for save/load json files
+Common Excel | Functions for MS Excel
+Common Mongo | Functions for MongoDB
+Common Json | A couple of functions for saving/loading json files
 CommonUI | Lots of general WPF stuff
 WpfControls | Demo of custom UI Controls
 WpfProjectTemplate | A template project for WPF in MVVM style
