@@ -7,7 +7,7 @@ Folder  | Description
 ------------- | -------------
 Common  | General C# functions.  No dependencies (except .net)
 Common Dialogs  | Functions for creating dialogs
-Common Excel | Functions for MS Excel
+Common Excel | Functions for MS Excel using MS Interop
 Common Mongo | Functions for MongoDB
 Common Json | A couple of functions for saving/loading json files
 CommonUI | Lots of general WPF stuff
