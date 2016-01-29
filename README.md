@@ -1,9 +1,7 @@
 # Csharp-Library
-Common C# functions.  Helpful for WPF Development of MVVM desktop programs.  This is still a work in progress, not all code is tested. 
+I made a library from bits of code from my old projects.  It's helpful for making small MVVM WPF programs.  It's still a work in progress
 
-Dependencies are json.net ,Ookii.Dialogs, MongoDB C# drivers depending on which parts of the library you use
-
-Code...
+Dependencies are json.net ,Ookii.Dialogs, MongoDB C# drivers depending on which parts of the library are used
 
 Folder  | Description
 ------------- | -------------
