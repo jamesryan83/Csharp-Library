@@ -8,11 +8,6 @@ namespace Common
 {
 	public class WebUtil
 	{
-		// Some example urls...
-		// https://api.pipelinedeals.com/api/v3/deals.json?api_key=285lQQOzPAU4U8ud9
-		// https://api.myintervals.com/task/?limit=5000&excludeclosed=t
-		// http://seriousserver:81/mediawiki/api.php?action=query&prop=categories&cllimit=max&gcmlimit=max&format=json
-
 
 		// Send http request		
 		// method is POST or GET
