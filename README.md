@@ -12,5 +12,5 @@ Common Mongo | Functions for MongoDB
 Common Json | A couple of functions for saving/loading json files
 CommonUI | Lots of general WPF stuff
 WpfControls | Demo of custom UI Controls
-WpfProjectTemplate | A template project for WPF in MVVM style
+WpfProjectTemplate | A template project for WPF in MVVM using Common & CommonUI
 
